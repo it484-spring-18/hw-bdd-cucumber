@@ -14,12 +14,17 @@ The app code in `rottenpotatoes` contains a "canonical" solution to the
 Rails Intro assignment against which to write your scenarios, and the
 necessary scaffolding for the first couple of scenarios. 
 
-Fork this repo to your GitHub account, then clone the fork to your
-development environment:
-
-```sh
-$ git clone git@github.com:your_github_username/hw-bdd-cucumber.git
-```
+Before tackling the rest of the assignment, I recommend getting Cucumber up and running
+by following along with the steps in section 7.7 of the textbook. 
+Here's the tl;dr version:
+ 1. Clone this repo to your development environment on Cloud9, and cd to the directory
+ 1. Run `bundle install --without production` to install the Cucumber gems in the repo
+ 1. Run `rails generate cucumber:install capybara`, and answer "Y" to questions about overwriting stuff
+ 1. Run `rails generate cucumber_rails_training_wheels:install`
+ 1. Run `rake db:test:prepare`
+ 1. Copy the code from http://pastebin.com/CSCVp9M3 into `features/AddMovie.feature`
+ 1. Run `cucumber features/AddMovie.feature` (now we're doing the steps we saw in the screencast)
+ 1. To fix the error, copy the code from http://pastebin.com/RbPqfg1g into your `paths.rb` file
 
 We recommend
 that you do a `git commit` as you get each part working.  As an optional
